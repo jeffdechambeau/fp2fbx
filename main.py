@@ -31,8 +31,6 @@ if __name__ == "__main__":
     program_path = os.path.dirname(os.path.realpath(__file__))
     blender_script_path = const.BLENDER_SCRIPT_PATH
 
-    print(data_folder, target_folder, blender_install_path)
-
     floorplans = [floorplan.new_floorplan(c) for c in CONFIG_PATH.split(" ")]
     print(floorplans)
 
