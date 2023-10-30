@@ -12,7 +12,7 @@ from FloorplanToBlenderLib import (
 import os
 import bpy
 
-CONFIG_PATH = "/content/fp2fbx/Config/default.ini"
+CONFIG_PATH = "./Config/default.ini"
 """
 Create Blender Project from floorplan
 This file contains a simple example implementation of creations of 3d models from
