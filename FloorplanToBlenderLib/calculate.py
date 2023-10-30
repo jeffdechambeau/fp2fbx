@@ -22,7 +22,9 @@ def points_inside_contour(points, contour):
     Return false if all of the points are outside of the contour
     """
     for x, y in points:
-        if cv2.pointPolygonTest(contour, (x, y), False) == 1.0:
+        float_x = float(x)
+        float_y = float(y)
+        if cv2.pointPolygonTest(contour, (float_x, float_y), False) == 1.0:
             return True
     return False
 
@@ -104,7 +106,8 @@ def best_matches_with_modulus_angle(match_list):
             pos1_cap = match_list[i][1]
             pos2_cap = match_list[j][1]
 
-            pt1 = (pos1_model[0] - pos2_model[0], pos1_model[1] - pos2_model[1])
+            pt1 = (pos1_model[0] - pos2_model[0],
+                   pos1_model[1] - pos2_model[1])
             pt2 = (pos1_cap[0] - pos2_cap[0], pos1_cap[1] - pos2_cap[1])
 
             if pt1 == pt2 or pt1 == (0, 0) or pt2 == (0, 0):
