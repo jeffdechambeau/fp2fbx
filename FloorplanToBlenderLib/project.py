@@ -30,7 +30,7 @@ def create_blender_project_from_path(blender_install_path, blender_script_path, 
     """Creates a blender project using the provided paths."""
     check_output(
         [blender_install_path, "-noaudio", "--background", "--python",
-            blender_script_path, program_path, target_path] + data_paths
+            blender_script_path, program_path, target_path, data_paths]
     )
 
 
