@@ -28,7 +28,7 @@ SUPPORTED_BLENDER_FORMATS = (
     ".fbx",
     ".3ds",
 )
-BASE_FORMAT = ".blend"
+BASE_FORMAT = ".fbx"
 
 
 class MODE(Enum):
@@ -48,7 +48,8 @@ WALL_HEIGHT = 1
 PIXEL_TO_3D_SCALE = 100
 
 # Paths to models
-DOOR_MODEL = "Images/Models/Doors/door.png"  # TODO: make dynamic folder solution, to add more doors!
+# TODO: make dynamic folder solution, to add more doors!
+DOOR_MODEL = "Images/Models/Doors/door.png"
 DOOR_WIDTH = 5
 
 # Data creation
@@ -161,7 +162,7 @@ DEFAULT_IMAGE_PATH = "Images/Examples/example.png"
 DEFAULT_OUT_FORMAT = ".blend"
 DEFAULT_OVERWRITE_DATA = "False"
 MAC_DEFAULT_BLENDER_INSTALL_PATH = "/Applications/Blender.app/Contents/MacOS/Blender"
-LINUX_DEFAULT_BLENDER_INSTALL_PATH = "/usr/local/blender/blender"
+LINUX_DEFAULT_BLENDER_INSTALL_PATH = "/usr/local/blender"
 WIN_DEFAULT_BLENDER_INSTALL_PATH = (
     "C:\\Program Files\\Blender Foundation\\Blender 2.90\\blender.exe"
 )
