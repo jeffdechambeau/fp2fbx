@@ -1,4 +1,5 @@
 from subprocess import check_output
+from Daniel.FloorplanToBlender3d.FloorplanToBlenderLib import project
 from FloorplanToBlenderLib import (
     IO,
     config,
@@ -6,7 +7,7 @@ from FloorplanToBlenderLib import (
     execution,
     dialog,
     floorplan,
-    stacking, create_blender_project
+    stacking
 )
 import os
 import bpy
@@ -41,6 +42,6 @@ if __name__ == "__main__":
     print("Cleaning data files\n")
 
     for paths in data_paths:
-        create_blender_project(paths)
+        project.create_blender_project(paths)
 
     print("\nDone, Have a nice day!")
