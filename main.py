@@ -1,5 +1,4 @@
 from subprocess import check_output
-from Daniel.FloorplanToBlender3d.FloorplanToBlenderLib import project
 from FloorplanToBlenderLib import (
     IO,
     config,
@@ -7,7 +6,8 @@ from FloorplanToBlenderLib import (
     execution,
     dialog,
     floorplan,
-    stacking
+    stacking,
+    project
 )
 import os
 import bpy
