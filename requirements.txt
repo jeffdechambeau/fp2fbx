@@ -11,3 +11,5 @@ matplotlib
 black
 pytest
 bpy
+google-colab
+pyfiglet
