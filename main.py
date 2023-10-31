@@ -10,9 +10,6 @@ from FloorplanToBlenderLib import (
     project
 )
 import os
-import bpy
-
-CONFIG_PATH = "./Config/default.ini"
 """
 Create Blender Project from floorplan
 This file contains a simple example implementation of creations of 3d models from
@@ -30,16 +27,9 @@ if __name__ == "__main__":
     target_folder = const.TARGET_PATH
     program_path = os.path.dirname(os.path.realpath(__file__))
     blender_script_path = const.BLENDER_SCRIPT_PATH
-    print(blender_install_path)
-    floorplans = [floorplan.new_floorplan(c) for c in CONFIG_PATH.split(" ")]
-    print(floorplans)
+    fp = floorplan.new_floorplan(None)
 
-    data_paths = [execution.simple_single(fp) for fp in floorplans]
-
-    print("\nGenerating data files in folder: Data\n")
-    print("Cleaning data files\n")
-
-    for paths in data_paths:
-        project.create_blender_project(paths)
+    data_path = execution.simple_single(fp)
+    project.create_blender_project(data_path)
 
     print("\nDone, Have a nice day!")
