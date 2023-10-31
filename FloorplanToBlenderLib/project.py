@@ -27,23 +27,34 @@ def get_target_path(target_folder):
 
 
 def create_blender_project_from_path(blender_install_path, blender_script_path, program_path, target_path, data_paths):
-    """Creates a blender project using the provided paths."""
-    check_output(
-        [blender_install_path, "-noaudio", "--background", "--python",
-            blender_script_path, program_path, target_path, data_paths]
-    )
+    cmd = [
+        blender_install_path,
+        "-noaudio",
+        "--background",
+        "--python",
+        blender_script_path,
+        program_path,
+        target_path,
+        str(data_paths)  # Ensure it's a string
+    ]
+    check_output(cmd)
 
 
 def export_to_format(blender_install_path, target_path, outformat):
-    """Exports the blender project to the specified format."""
-    if outformat != ".blend":
-        target_base, _ = os.path.splitext(target_path)
-        check_output(
-            [blender_install_path, "-noaudio", "--background", "--python",
-                "./Blender/blender_export_any.py", target_path, outformat, target_base + outformat]
-        )
-        print(
-            f"Object created at: {os.path.join(program_path, target_base + outformat)}")
+    target_base, _ = os.path.splitext(target_path)
+    cmd = [
+        blender_install_path,
+        "-noaudio",
+        "--background",
+        "--python",
+        "./Blender/blender_export_any.py",
+        target_path,
+        outformat,
+        target_base + outformat
+    ]
+    check_output(cmd)
+    print(
+        f"Object created at: {os.path.join(program_path, target_base + outformat)}")
 
 
 def create_blender_project(data_paths):
