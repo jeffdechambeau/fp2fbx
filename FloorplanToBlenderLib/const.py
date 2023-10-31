@@ -162,7 +162,7 @@ DEFAULT_IMAGE_PATH = "Images/Examples/example.png"
 DEFAULT_OUT_FORMAT = ".blend"
 DEFAULT_OVERWRITE_DATA = "False"
 MAC_DEFAULT_BLENDER_INSTALL_PATH = "/Applications/Blender.app/Contents/MacOS/Blender"
-LINUX_DEFAULT_BLENDER_INSTALL_PATH = "/usr/local/blender"
+LINUX_DEFAULT_BLENDER_INSTALL_PATH = "/usr/bin/blender"
 WIN_DEFAULT_BLENDER_INSTALL_PATH = (
     "C:\\Program Files\\Blender Foundation\\Blender 2.90\\blender.exe"
 )
