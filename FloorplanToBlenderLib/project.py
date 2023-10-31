@@ -9,7 +9,7 @@ from FloorplanToBlenderLib import (
 blender_install_path = config.get_default_blender_installation_path()
 data_folder = const.BASE_PATH
 target_folder = const.TARGET_PATH
-program_path = os.path.dirname(os.path.realpath(__file__))
+program_path = '/content/fp2fbx/'
 blender_script_path = const.BLENDER_SCRIPT_PATH
 
 print("blender_install_path", blender_install_path)
