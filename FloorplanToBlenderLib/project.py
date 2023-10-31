@@ -47,7 +47,7 @@ def export_to_format(blender_install_path, target_path, outformat):
         "-noaudio",
         "--background",
         "--python",
-        "./Blender/blender_export_any.py",
+        "/content/fp2fbx/Blender/blender_export_any.py",
         target_path,
         outformat,
         target_base + outformat
