@@ -52,6 +52,7 @@ def export_to_format(blender_install_path, target_path, outformat):
         outformat,
         target_base + outformat
     ]
+    print(cmd)
     check_output(cmd)
     print(
         f"Object created at: {os.path.join(program_path, target_base + outformat)}")
