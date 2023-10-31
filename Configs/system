@@ -1,5 +1,0 @@
-[SYSTEM]
-overwrite_data = False
-blender_installation_path = /usr/bin/blender
-out_format = ".fbx"
-
