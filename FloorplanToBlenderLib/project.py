@@ -12,6 +12,12 @@ target_folder = const.TARGET_PATH
 program_path = os.path.dirname(os.path.realpath(__file__))
 blender_script_path = const.BLENDER_SCRIPT_PATH
 
+print("blender_install_path", blender_install_path)
+print("data_folder", data_folder)
+print("target_folder", target_folder)
+print("program_path", program_path)
+print("blender_script_path", blender_script_path)
+
 
 def ensure_directory_exists(path):
     """Ensures the directory for the given path exists."""
