@@ -12,12 +12,6 @@ target_folder = const.TARGET_PATH
 program_path = '/content/fp2fbx/'
 blender_script_path = const.BLENDER_SCRIPT_PATH
 
-print("blender_install_path", blender_install_path)
-print("data_folder", data_folder)
-print("target_folder", target_folder)
-print("program_path", program_path)
-print("blender_script_path", blender_script_path)
-
 
 def ensure_directory_exists(path):
     """Ensures the directory for the given path exists."""
@@ -58,7 +52,6 @@ def export_to_format(blender_install_path, target_path, outformat):
         outformat,
         target_base + outformat
     ]
-    print(cmd)
     check_output(cmd)
     print(
         f"Object created at: {os.path.join(program_path, target_base + outformat)}")
